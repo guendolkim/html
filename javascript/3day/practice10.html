@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="practice10.js"></script>
+  <!-- html에 defer는 html의 문서가 다 읽혀지고 나서 defer가 마지막으로 수행 -->
+</head>
+<body>
+  <h3>
+    book 객체 배열 만들기
+  </h3>
+  <hr>
+  <script>
+    for(let i=0; i<bookArrays.length;i++){
+      documnent.write(bookArrays[i].title + ", ");
+      documnent.write(bookArrays[i].author + ", ");
+      documnent.write(bookArrays[i].price + "<br>");
+    }
+  </script>
+  <hr>
+  <script>
+    document.write("가장 가격이 비싼 책은 " + max(bookArray).title);
+  </script>
+</body>
+</html>

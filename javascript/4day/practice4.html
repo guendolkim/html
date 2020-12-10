@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>계산해봅시다</h1>
+  <hr>
+  <p>2 + 4 = <span>답</span></p>
+  <p>2 * 20 + 60= <span>답</span></p>
+  <p>20/5-8*2 = <span>답</span></p>
+
+  <script>
+    const $span = document.getElementsByTagName("span");
+    console.log($span);
+    Array.from($span).forEach(function(ele){
+      ele.addEventListener("click", function(evt){
+        let exp = evt.target.parentElement.textContent.split('=')[0];  //textContent 대신 innerHTML하면 안에 내용을 모두가져오지만 textContent는 text부분만 출력
+        let result = (eval(exp));
+        evt.target.innerHTML = result;
+      });
+    });
+  </script>
+</body>
+</html>

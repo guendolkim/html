@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function change1(){
+    const find = document.getElementById('ho');
+    ho.style.color = "red";
+    }</script>
+  <script>
+ function change(){
+   let spanArray = document.getElementsByTagName("span");
+   for(let i=0; i<spanArray.length;i++){
+     let span = spanArray[i];
+     span.style.color ="orchid";
+     span.style.fontSize = "20px";
+   }
+ }
+  </script>
+  <script>
+    function change2(obj, size, color){
+      obj.style.color = color;
+      obj.style.fontSize = size;
+      
+    }
+  </script>
+</head>
+<body>
+  <h3>내가 좋아하는 과일<button onclick="change()">누르세요</button>
+  </h3>
+  저는 빨간<span> 사과</span>를 좋아해서 아치마다 한 개씩먹고 있어요. 운동할 때는 중가 중간에 <span> 바나나</span>를 먹지요.
+  
+<br>
+  <p id="ho" style="color: blue" onclick="change1()" >hello </p>
+  <div onclick="change2(this, '40px', 'gray')">바보</div>
+  
+  
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img{
+      width: 100px;
+      height: 100px;
+      position: fixed;
+      /* left: 100px;
+      top: 200px; */
+    }
+  </style>
+</head>
+<body>
+  <h3>커서만들기</h3>
+  <hr>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur fuga voluptatibus exercitationem officiis omnis dignissimos totam, expedita atque rem commodi alias dicta, natus hic, reiciendis repudiandae delectus quisquam earum sed?
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. In, sunt quae molestias praesentium saepe delectus soluta tenetur ut deserunt ea quis maiores laudantium aut, nam animi quidem debitis. Qui, quae.
+  </p>
+  <div>
+    <img src="https://i.pinimg.com/originals/6a/e5/31/6ae531818022052ff5b9835408b95073.png">
+    </div>
+  <script>
+    const $img = document.querySelector("img");
+    document.addEventListener("mousemove",function(evt){
+      // $img.style.left = `${evt.clientX}px`;
+      // $img.style.top = `${evt.clientY}px`;
+      $img.style.left = evt.clientX + 'px';
+      $img.style.top = evt.clientY + 'px';
+    });
+  </script>
+</body>
+</html>

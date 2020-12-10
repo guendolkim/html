@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    b {
+      background-color: yellow;
+    }
+  </style>
+  <script src="domtest1.js"></script>
+  <!--defer : dom 트리 생성후 js코드 실행
+      asunc : dom 트리와 병행해서 js코드 실행
+     -->
+</head>
+<body>
+  <b id="edu">울산KH정보교육원</b>
+  <button class="btn">클 릭</button><br>
+  <textarea id="contents" cols="30" rows="10">dfsfsfs</textarea>
+  <button class="btn2">컨텐츠 수정</button>
+  <!-- ******  DOM tree가 만들어진 상태에서 접근을 할 수 있기때문에 DOM객체 밑에서 수정을 한다  ****** -->
+  <script>
+    
+    const $edu = document.getElementById('edu');
+    console.log($edu);
+    
+
+
+    const $btn = document.getElementsByClassName("btn")[0];
+    console.log($btn);
+    $btn.addEventListener("click",function(){
+      console.log('버튼 클릭됨!!');
+      $edu.style.backgroundColor = "green";
+      $edu.style.fontSize = "2em";
+      $edu.style.color = "white";
+    });
+  
+  </script>
+  
+
+</body>
+</html>
