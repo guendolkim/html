@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>지역변수와 전역변수</h3>
+<hr>
+<script>
+  const x = 100;
+
+  function f(){
+    const x=1;
+    document.write("지역변수 x=" + x);
+    document.write("<br>");
+    document.write("전역변수 x=" + this.x);
+  }
+  f();
+  const y = prompt("dhihihi","ghhh");
+  if(y ==null){
+
+  }else if(y ==""){
+
+  }
+  const z = confirm("send?");
+
+  alert("hohoho");
+</script>
+</body>
+</html>
