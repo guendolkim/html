@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  
+</head>
+<body id="parent">
+  <h3>버킷리스트</h3>
+  
+  <hr>
+  <input id="insert" type="text">
+  <button onclick="addTextNode();">등록</button>
+  
+  <script>
+
+    function addTextNode()
+    {
+      const $fix = document.getElementById('fix');
+      const $insert = document.getElementById('insert').value;
+      const pa = document.createElement("li");
+      const fix = document.createElement("button")
+      const del = document.createElement("button")
+      fix.addEventListener('click',function(){
+        
+      })
+      del.addEventListener('click',function(){
+        var list = document.getElementById("insert");
+        list.removeChild(list);
+      })
+      fix.innerHTML = "수정";
+      del.innerHTML = "삭제";
+      pa.innerHTML = $insert;
+      document.getElementById('parent').appendChild(pa);
+      document.getElementById('parent').appendChild(fix);
+      document.getElementById('parent').appendChild(del);
+      
+      
+    }
+    
+    
+      </script>
+  
+</body>
+</html>

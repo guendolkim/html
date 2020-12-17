@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      background-color: burlywood;
+    }
+    ol{
+      list-style: none;
+      margin: 10px;
+      padding: 5px;
+    }
+    ol{
+      background-color: cadetblue;
+    }
+    ol li{
+      padding: 5px;
+    }
+    ol li span.key{
+      margin-right: 10px;
+      background-color: chartreuse;
+    }
+    ol li span.num{
+      margin-right: 5px;
+      border:1px solid;
+
+    }
+  </style>
+</head>
+<body>
+ <h3>포스트잇 출력</h3>
+ <hr>
+ <div></div>
+ <ol>
+ <script>
+   for(let i=0; i<localStorage.length; i++){
+     const key = localStorage.key(i);
+     let value = localStorage.getItem(key);
+     document.write("<li>")
+      document.write(`<span class=num>${i+1}${"."}${"   "}</span>`);
+      document.write(`<span class=key>${key}</span>`);
+      document.write(value);
+      document.write("</li>")
+   }
+ </script>
+ </ol>
+</body>
+</html>

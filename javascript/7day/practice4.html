@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const init = function(evt){
+      console.log(navigator);
+      if(navigator.userAgent.indexOf("Chrome") !=-1 &&
+        navigator.vendor == "google Inc."){
+          alert('구글크롬맞음')
+        }else{
+      
+      alert('아님');
+    }
+    }
+    window.addEventListener("load",init);
+
+  </script>
+</head>
+<body>
+  <h3>구글 chrome브라우저 감별</h3>
+  <hr>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse inventore delectus cupiditate, laboriosam repudiandae illo excepturi illum nostrum corrupti nam et neque, aut provident beatae, eum quos. Eaque, incidunt sunt.</p>
+
+</body>
+
+</html>

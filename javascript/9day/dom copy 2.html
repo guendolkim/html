@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>li요소추가와 텍스트삽입</title>
+</head>
+<body>
+  <ul id="fruits">
+    <li id="apple">Apple</li>
+    <li id="banana">Banana</li>
+    <li id="orange">Orange</li>
+    <!-- <li id="grape" class="item4">Grape</li> -->
+  </ul>
+  
+  <!-- <div><button id="btn-del">삭제</button></div> -->
+  <script>
+    //1)fruits의 하위요소로  grape 요소추가
+   const $li = document.createElement('li');
+   const $node = document.createTextNode('Grape');
+   const $id = document.createAttribute('id');
+   $id.value = 'grape';
+
+   $id2.value = 'item4';
+   $li.setAttributeNode('$id2')
+
+   $li.setAttributeNode($id);   //<li id=""> li와 id를 연결 해줌
+   $li.append($node); //<li>Grape</li> li의 text부분을 연결해줌
+   $li.append($node);
+   //!!!!!Dom Tree에 li 요소 추가.
+    const $fruits = document.getElementById('fruits');
+    $fruits.appendChild($li);
+  </script>
+</body>
+</html>

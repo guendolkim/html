@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul{
+      list-style: none;
+      padding-left: 0px;
+    }
+    ul li span#today {
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h3>
+    일기쓰기
+  </h3>
+  <hr>
+  <ul>
+  <li><span>오늘</span><span id="today"></span></li>
+  <li><textarea name="" id="diary" cols="30" rows="10"></textarea></li>
+  <li><button id="btn_save">저장</button><button id="btn_view">보기</button></li>
+</ul>
+<script>
+  const today = new Date().toLocaleDateString().replaceAll(' ','');
+  document.getElementById('today').textContent = today;
+
+  //저장
+  document.getElementById('btn_save').addEventListener("click",(evt)=>{
+    console.log(evt);
+    localStorage.setItem(document.getElementById('today').textContent,
+                          document.getElementById('diary').value)
+  },false);
+  //보기
+  document.getElementById('btn_view').addEventListener("click",(evt)=>{
+    console.log(evt);
+    window.open("practice4-1.html","_blank","top=100,left=100,width=500,height=400")
+  },false);
+
+</script>
+
+</body>
+</html>

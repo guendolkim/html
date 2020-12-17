@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<body>
+  <ul id="fruits">
+    <li id="apple">Apple</li>
+    <li id="banana">Banana</li>
+    <li id="orange">Orange</li>
+    <li id="grape" class="item4">Grape<button>수정</button></li>
+  </ul>
+  <script>
+    // textContent : 컨텐츠내에서 모든 텍스트(하위요소 포함)를 읽어오거나 변경 할 때
+    // innerHTML : 컨텐츠내에서 모든 텍스트(하위요소 포함)(텍스트 + 요소)를 읽어오거나 변경 할 때
+
+    console.log(document.getElementById('grape').textContent);
+    console.log(document.getElementById('grape').innerHTML);
+    console.log(document.getElementById('grape').firstChild.textContent);
+    console.log(document.getElementById('grape').firstChild.nodeValue);
+    console.log(document.getElementById('grape').innerHTML = "test<button>수정</button>");   //text 에서 태그가 먹힐려면 innerHTML을 활용
+  </script>
+  
+</body>
+</html>
+
