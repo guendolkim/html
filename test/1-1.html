@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2>키다리아저씨</h2>
+  <hr>
+  <ul>
+    <li><label for="eng">영어<input type="text" id="eng"></label></li>
+    <li><label for="kor">한글<input type="text" id="kor"></label></li>
+  </ul>
+  <button id="btn_save">입력</button>
+  <button id="btn_search">검색</button>
+  <button id="btn_del">삭제</button>
+  <button id="btn_fix">수정</button>
+</body>
+<script>
+  const $eng = document.getElementById('eng');  
+  const $kor = document.getElementById('kor');  
+  
+  const $btn_save = document.getElementById('btn_save');  
+  const $btn_search = document.getElementById('btn_search');  
+  const $btn_del = document.getElementById('btn_del');  
+  const $btn_fix = document.getElementById('btn_fix');  
+
+  $btn_save.addEventListener("click", (evt)=>{
+    if(localStorage.getItem($eng.value) != null){
+      if(confirm('수정?')){
+        localStorage.setItem($eng.value,$kor.value);
+      }else{
+        return;
+      }
+    }
+    localStorage.setItem($eng.value,$kor.value);
+  });
+
+  
+
+
+
+  
+</script>
+</html>
