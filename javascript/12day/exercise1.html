@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <audio id="pop" src="media/생일축하.mp3" autoplay controls>
+    웹 브라우저가 audio 테그를 지원하지 않습니다.
+  </audio>
+  <br>
+  <div><button id="btn1">오디오 일시중지</button></div>
+  <div><button id="btn2">음량0.1만큼 줄이기</button></div>
+  <div><button id="btn3">오디오 소스바꾸기</button></div>
+  <div><button id="btn4">바꾼오디오재생시작</button></div>
+  <div><button id="btn5">음소거</button></div>
+    <script>
+      const $audio = document.getElementById('pop');
+      const $btn1 = document.getElementById('btn1');
+      const $btn2 = document.getElementById('btn2');
+      const $btn3 = document.getElementById('btn3');
+      const $btn4 = document.getElementById('btn4');
+      const $btn5 = document.getElementById('btn5');
+
+      $btn1.addEventListener("click",(evt)=>{
+        console.log('btn1');
+        $audio.pause();
+      });
+      $btn2.addEventListener("click",(evt)=>{
+        $audio.volum -= 0.1;
+      });
+      $btn3.addEventListener("click",(evt)=>{
+        $audio.src = "media/생일축하2.mp3";
+      });
+      $btn4.addEventListener("click",(evt)=>{
+        $audio.load();
+        $audio.play();
+      });
+      $btn5.addEventListener("click",(evt)=>{
+        $audio.muted = true;
+      });
+      $audio.addEventListener("ended",(evt)=>{
+        console.log('끝!');
+        $audio.src = "media/생일축하2.mp3";
+        $audio.load();
+        $audio.play();
+      },false);
+    </script>
+</body>
+</html>

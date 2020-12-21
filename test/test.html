@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      display: inline-block;
+    }
+  </style>
+</head>
+<body id="body">
+   <h3>버킷리스트</h3>
+  <hr>
+  <div>
+  <ul>
+  <li><label for="write"></label><input id="write" type="text" size="20"></li>
+  </ul>
+</div>
+<form action="#">
+<div>
+  <button id="btn_save">입력</button>
+  <button id="btn_fix">수정</button>
+  <button id="btn_del">삭제</button>
+  <button id="btn_move">이동</button>
+</div>
+  <hr>
+  <ul id="list">
+
+  </ul>
+</form>
+  <script>
+   window.addEventListener("load",(evt)=>{
+    for(let i=0; i<localStorage.length;i++){
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        let keyvalue = `${value}`;
+        const $li = document.createElement('li');
+    $li.textContent = keyvalue;
+    $list.appendChild($li);
+     }
+   });
+   const $write = document.getElementById('write');
+   
+   const $btn_save = document.getElementById('btn_save');
+   const $btn_fix = document.getElementById('btn_fix');
+   const $btn_del = document.getElementById('btn_del');
+   const $btn_move = document.getElementById('btn_move');
+   const $list =  document.getElementById('list');
+
+   //마우스 클릭 하면 선택되어짐
+  let tmp;
+  const $li = document.querySelector('li');
+    $list.addEventListener("click",(evt)=>{
+      tmp = evt.target.textContent;
+      $write.value =tmp;
+      console.log(evt.target.textContent);
+    });
+
+   $btn_save.addEventListener("click", (evt)=>{
+     if(localStorage.getItem($write.value) != null){
+       if(confirm('수정을 하시려면 수정버튼을 이용해주세요')){
+         localStorage.setItem($write.value, $write.value);
+      }
+        // else{
+        //   return;
+        // }        
+      }      
+      localStorage.setItem($write.value, $write.value);
+       $list.innerHTML = ' ';
+      for(let i=0; i<localStorage.length;i++){
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        let keyvalue = `${value}`;
+        const $li = document.createElement('li');
+    $li.textContent = keyvalue;
+    $list.appendChild($li);
+     }   
+   });
+
+   $btn_del.addEventListener("click", (evt)=>{
+     console.log(tmp);
+      localStorage.removeItem(tmp);
+     $list.innerHTML = ' ';
+     for(let i=0; i<localStorage.length;i++){
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        let keyvalue = `${value}`;
+        const $li = document.createElement('li');
+        $li.textContent = keyvalue;
+        $list.appendChild($li);
+      }
+   });
+   $btn_fix.addEventListener("click", (evt)=>{
+    localStorage.setItem($write.value,$write.value);
+    localStorage.removeItem(tmp);
+    $list.innerHTML = ' ';
+    for(let i=0; i<localStorage.length;i++){
+        let key = localStorage.key(i);
+        let value = localStorage.getItem(key);
+        let keyvalue = `${value}`;
+        const $li = document.createElement('li');
+        $li.textContent = keyvalue;
+        $list.appendChild($li);
+      }
+    
+   },false);
+    
+
+  
+  </script>
+</body>
+</html>

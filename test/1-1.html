@@ -15,7 +15,7 @@
   <button id="btn_save">입력</button>
   <button id="btn_search">검색</button>
   <button id="btn_del">삭제</button>
-  <button id="btn_fix">수정</button>
+  <button id="btn_view">보기</button>
 </body>
 <script>
   const $eng = document.getElementById('eng');  
@@ -24,7 +24,7 @@
   const $btn_save = document.getElementById('btn_save');  
   const $btn_search = document.getElementById('btn_search');  
   const $btn_del = document.getElementById('btn_del');  
-  const $btn_fix = document.getElementById('btn_fix');  
+  const $btn_view = document.getElementById('btn_view');  
 
   $btn_save.addEventListener("click", (evt)=>{
     if(localStorage.getItem($eng.value) != null){
@@ -35,6 +35,19 @@
       }
     }
     localStorage.setItem($eng.value,$kor.value);
+  });
+
+  $btn_search.addEventListener("click",(evt)=>{
+    const word = localStorage.getItem($eng.value);
+    $kor.value = word;
+  });
+
+  $btn_del.addEventListener("click",(evt)=>{
+    localStorage.removeItem($eng.value);
+  });
+
+  $btn_view.addEventListener("click",(evt)=>{
+    window.open("ch1.html","_blank","top=100,left=100,width=500,height=500");
   });
 
   

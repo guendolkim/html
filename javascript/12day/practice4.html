@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>뮤직플레이어</title>
+  <style>
+    li{
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <h3>오디오 재생</h3>
+  <p>듣고 싶은 곡은 선택하고 시작 버튼을 누르면 연속하여 자동연주</p>
+  <hr>
+  <audio id="audio" autoplay controls></audio>
+  <ul>
+  <li><label for="song1"><input type="checkbox" value="" name="애국가" id="song1">애국가</label></li>
+  <li><label for="song2"><input type="checkbox" value="생일축하.mp3" name="Moon Glow" id="song2">Moon Glow</label></li>
+  <li><label for="song3"><input type="checkbox" value="" name="Embraceable You" id="song3">Embraceable You</label></li>
+  <li><label for="song4"><input type="checkbox" value="생일축하2.mp3" name="애국가" id="song4">애국가</label></li>
+  <li><label for="start"><button id="start">연주시작</button></label></li>
+</ul>
+</body>
+<script>
+  const $audio = document.getElementById('audio');
+  const $song1 = document.getElementById('song1');
+  const $song2 = document.getElementById('song2');
+  const $song3 = document.getElementById('song3');
+  const $song4 = document.getElementById('song4');
+  const $start = document.getElementById('start');
+
+  // $pop.addEventListener("click" )
+
+  $start.addEventListener("click",(evt)=>{
+    console.log('dd');
+    const $inputs = document.querySelectorAll('input:checked');
+    let playIndex = -1;
+    nextPlay();
+    function nextPlay(){
+      if(++playIndex == $inputs.length)
+      return;
+      $audio.src=$inputs[playIndex].value;
+      $audio.play();
+      $audio.addEventListener('ended',nextPlay,false);
+    }
+  },false);
+</script>
+</html>
