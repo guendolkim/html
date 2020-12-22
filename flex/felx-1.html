@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>플렉스</title>
+  <style>
+    .container {
+      display: flex; /*플렉스 스타일로 변경*/
+      /* flex-direction: row;  */
+      /*주축을 가로로 (기본값row가로)(세로 column)(가로에서 입력값을 오른쪽에서 하려면 row-reverse) 
+      colunm_reverse */
+      border:1px solid #222;
+      background-color: #eee;
+    }
+    .opt1 {
+      flex-direction: row; /*주축을 가로 (기본값)*/
+    }
+    .opt2 {
+      flex-direction: row-reverse; /*주축을 가로역순 */
+    }
+    .opt3 {
+      flex-direction: column; /*주축을 세로 */
+    }
+    .opt4 {
+      flex-direction: column-reverse; /*주축을 세로역순 */
+    }
+
+    .box {
+      background-color: #222;
+      padding:5px 45px;  /* y축 x축 */
+      margin: 5px;
+      width: 80px;
+    }
+    p {
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container opt1">
+    <div class="box"> <p>1</p> </div>
+    <div class="box"> <p>2</p> </div>
+    <div class="box"> <p>3</p> </div>
+  </div>
+  <div class="container opt2">
+    <div class="box"> <p>1</p> </div>
+    <div class="box"> <p>2</p> </div>
+    <div class="box"> <p>3</p> </div>
+  </div>
+  <div class="container opt3">
+    <div class="box"> <p>1</p> </div>
+    <div class="box"> <p>2</p> </div>
+    <div class="box"> <p>3</p> </div>
+  </div>
+  <div class="container opt4">
+    <div class="box"> <p>1</p> </div>
+    <div class="box"> <p>2</p> </div>
+    <div class="box"> <p>3</p> </div>
+  </div>
+</body>
+</html>
