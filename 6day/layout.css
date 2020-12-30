@@ -1,0 +1,84 @@
+* {margin: 0; padding: 0;}
+
+/* common */
+.container {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* upper most */
+.uppermost {
+  background-color: burlywood;
+}
+.container-up {
+  background-color: #ffd180;
+}
+/* header */
+header {
+  background-color: #b9000b;
+}
+.container-h {
+  background-color: #f44333;
+  background-image: url(https://cdn.pixabay.com/photo/2018/10/09/15/03/england-3735180_960_720.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100px;
+}
+/* nav */
+nav {
+  background-color: #003d33;
+}
+.container-n {
+  background-color: #00685b;
+}
+/* main */
+main {
+  background-color: #007c91;
+}
+.container-m {
+  background-color: #00acc1;
+  outline: 3px solid red;
+  overflow: hidden;
+}
+.container-m section {
+  float: left;
+  
+}
+.container-m section.s1 {
+  background-color: #003d00;
+  width: 40%;
+  
+}
+.container-m section.s2 {
+  background-color: violet;
+  width: 30%;
+}
+.container-m section.s3 {
+  background-color: slateblue;
+  width: 30%;
+}
+
+/* footer menu */
+.footermenu {
+  background-color: #caa052;
+}
+.container-fm {
+  background-color: #ffd180;
+}
+/* footer */
+footer {
+  background-color: #c96f53;
+}
+.container-f {
+  background-color: #ff9e80;
+}
+/* 배경색제거 */
+/* main, header, nav, .footermenu, footer {
+  background-color: transparent;
+} */
+
+/* clearfix */
+.clearfix {
+  clear: both; /*float의 왼쪽, 오른쪽 흐름을 차단*/
+}

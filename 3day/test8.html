@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+ 
+    body {
+      background-color: #666;
+      color: #fff;
+      text-align: center;
+      margin: 1;
+     
+    }
+    
+    body>header {
+      background-color: brown;
+      width: 100%;
+      height: 10vh;
+      margin-bottom: 1vh;
+    }
+    nav {
+      background-color: burlywood;
+      width: 100%;
+      height: 10vh;
+      margin-bottom: 1vh;
+    }
+    .content>.left {
+      background-color: cadetblue;
+      width: 69%;
+      float: left;
+      margin-right: 1%;
+      
+    }
+
+    .content>.left>.s1 {
+      height: 30vh;
+           
+    }
+    
+    .content>.left>.s2 {
+      height: 40vh;
+      position: relative;
+       
+    }
+
+    
+
+    .content>.left>.s2>.h1 {
+      background-color: darkmagenta;
+      width: 100%;
+      height: 20%;
+      }
+    
+    .content>.left>.s2>.f1 {
+      background-color: darkmagenta;
+      width: 100%;
+      height: 20%;
+      position: absolute;
+      bottom: 0;
+
+    }
+
+    .content>.right {
+      background-color: chocolate;
+      width: 30%;      
+      float: left;
+     
+    }
+
+    .content>.right> article {
+      height: 30vh;
+    }
+    
+    .content>.right> aside {
+      height: 40vh;
+    }
+
+
+
+    .clearfix {
+      clear: both;
+      margin-top: 1vh;
+      
+    }
+
+    footer {
+      background-color: darkkhaki;
+      width: 100%;
+      height: 9vh;
+      margin-top: 1vh;
+    }
+
+  </style>
+</head>
+<body>
+  <header>header</header>
+  <nav>nav</nav>
+  <div class="content">
+  <div class="left">
+  <section class="s1">section</section>
+  <section class="s2">
+    <header class="h1">header</header>
+    section
+    <footer class="f1">footer</footer>
+  </section>
+</div>
+<div class="right">  
+<article>article</article>
+  <aside>aside</aside>
+</div>
+</div>
+<div class="clearfix">
+  <footer>footer</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes rota {
+    0% {transform :rotate(-90deg);}
+    /* 50% {transform: rotate(0deg);} */
+    100% {transform:rotate(90deg);}
+    }
+  
+    img {
+      animation-name: rota;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; /*반복할때 갔다가 돌아오겠끔하는 것*/    
+      }
+  </style>
+</head>
+<body>
+  <h1>
+    어지러워요
+  </h1>
+  <hr>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaD-ln5qsg0ZVe9iKSGR3pduzUSHGGO0vZag&usqp=CAU" alt="">
+</body>
+</html>

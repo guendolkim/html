@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @keyframes rota {
+    from {top:0px; transform :rotate(0deg);} 
+    50% {top:300px;} /*전체적으로 회전하는 시점*/
+    to {top:400px; transform:rotate(360deg);} /*회전하는 거리*/
+    
+    }
+    img {
+      position: absolute;
+      animation-name: rota;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease; /*이동하는 느낌*/
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    어지러워요
+  </h1>
+  <hr>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaD-ln5qsg0ZVe9iKSGR3pduzUSHGGO0vZag&usqp=CAU" alt="">
+  <script>
+    const $img = document.querySelector('img');
+    $img.addEventListener('click',(evt)=>{
+      evt.target.style.transform = 'scale(2,2)';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* img:hover {
+      transform: rotate(90deg);
+    } */
+
+    /* img:hover {
+      transform: skew(0deg, -20deg);
+    } */
+
+    /* img:hover {
+      transform: translate(50px, 100px);
+    } */
+
+     /* img:hover {
+      transform: translateY(50px, 100px);
+    } */
+
+     /* img:hover {
+      transform: scale(3, 1);
+    } */
+
+     /* img:hover {
+      transform: rotate(90deg) scale(3, 1);
+    } */
+  </style>
+</head>
+<body>
+  <h3>마우스를 올리시오</h3>
+  <hr>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaD-ln5qsg0ZVe9iKSGR3pduzUSHGGO0vZag&usqp=CAU" alt="">
+
+
+  <script>
+    const $img = document.querySelector('img');
+    $img.addEventListener('mouseover',(evt)=>{
+      evt.target.style.transform = 'rotate(90deg) scale(3)';
+    },false);
+    $img.addEventListener('mouseout',(evt)=>{
+      evt.target.style.transform = 'rotate(0deg) scale(1)';
+    },false);
+  </script>
+</body>
+</html>

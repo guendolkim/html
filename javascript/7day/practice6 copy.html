@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      background-color: lightblue;
+      width: 200px;
+      height: 30px;
+    }
+  </style>
+  <script>
+    let $div = null;
+    let interval = null;
+
+      const getTime =() =>{
+      const currentTime = new Date();
+      // console.log(currentTime);
+      const localTimeStr = currentTime.toLocaleTimeString();
+      $div.textContent = localTimeStr;
+    } 
+     const clock = () => {
+      if(interval == null) {
+        interval = setInterval(getTime,1000);
+        console.log(interval)
+      }else{
+        clearInterval(interval);
+        interval = null;
+        console.log(interval)
+      }
+      
+     
+    }
+
+    const init = function(evt){
+      $div = document.querySelector('div');
+      $div.addEventListener("click",clock);
+    }
+    window.addEventListener("load",init); //스크립트를 바디 위로올릴때
+  </script>
+</head>
+<body>
+  <h1>clock</h1>
+  <hr>
+  <div></div>
+  <!-- <script>
+    document.querySelector('div').innerHTML=Date();
+    
+  </script> -->
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ol{
+      list-style: none;
+      margin: 10px;
+      padding: 5px;
+    }
+    ol{
+      background-color: cadetblue;
+    }
+    ol li{
+      padding: 5px;
+    }
+    ol li span.key{
+      margin-right: 10px;
+      background-color: chartreuse;
+    }
+    ol li span.num{
+      margin-right: 5px;
+      border:1px solid;
+
+    }
+  </style>
+</head>
+<body>
+  <h3>
+    일기보기
+  </h3>
+  <hr>
+  
+<script>
+  let cnt=0;
+   for(let i=0; i<localStorage.length; i++){
+     const key = localStorage.key(i);
+
+    const regExp = /\d{4}.\d{2}.\d{2}./;
+    if(!regExp.test(key)) continue;
+
+     let value = localStorage.getItem(key);
+     document.write("<li>")
+      document.write(`<span class=num>${++cnt}${"."}${"   "}</span>`);
+      document.write(`<span class=key>${key}</span>`);
+      document.write(`<span class=value>${value}</span>`);
+      document.write("</li>")
+   }
+</script>
+
+</body>
+</html>

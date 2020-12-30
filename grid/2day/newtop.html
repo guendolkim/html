@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/77034e8e39.js" crossorigin="anonymous"></script>
+  <style>
+    *{outline: 1px solid red;
+      margin: 0px;}
+     .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      background-color: #333;
+      color: #FFF;
+      height: 10vh;
+    }
+    .left{
+      display: flex;
+      align-items: center;
+    }
+    .left>#rocket{
+      padding: 10px;
+      font-size: 30px;
+    }
+    .left>#space{
+      font-size: 20px;
+    }
+    ul {
+      width: 500px;
+      height: 10vh;
+      list-style: none;
+      display: flex;
+      
+      padding-left: 0px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li {
+      display: flex;
+      padding: 15px;
+      align-items: center;
+    }
+    .menu:hover{
+      background-color: blanchedalmond;
+      color: #000;
+    }
+   
+    .r_container{
+      width: 150px;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 30px;
+      padding: 20px;      
+    }
+
+    .button{
+      font-size: 30px;
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: salmon;
+    }
+    
+    
+    @media screen and (max-width:768px){
+      .container {
+     
+      justify-content: space-between;
+      flex-direction: column;
+      background-color: #333;
+      color: #FFF;
+      height: 400px;
+      margin: 0px;
+    }
+    div {
+         
+      align-items: center;
+      
+    }
+    .nav.active,
+    .r_container.active {
+      display: flex;
+    }
+
+    ul {
+      width:80px;
+      height: 200px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0px;
+      justify-content: space-between;
+    }
+    li {
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    /* 햄버거 아이콘 */
+    .button{
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: salmon;
+    }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div id="rocket"><i class="fas fa-rocket"></i></div>
+    <p id="space">울산kh정보교육원</p>
+  </div>
+    <div class="nav" id="nav">
+   <ul >
+      <li class="menu">java</li>
+      <li class="menu">database</li>
+      <li class="menu">spring</li>
+      <li class="menu">android</li>
+      <li class="menu">3d</li>
+    </ul>
+  </div>
+    <div class="r_container" id="r_container">
+      <div class="right"><i class="fab fa-facebook-square"></i></div>
+      <div class="right"><i class="fab fa-twitter-square"></i></div>
+      <div class="right"><i class="fab fa-instagram-square"></i></div>
+    </div>
+    <label for="toggle"></label>
+    <a id="toggle" class="button" href="#"><i class="fas fa-bars"></i></a>
+  </div> 
+  <script>
+    const $toggle = document.getElementById('toggle');
+    const $nav = document.getElementById('nav');
+    const $r_container = document.getElementById('container');
+
+    $toggle.addEventListener("click",(evt)=>{
+      const $a = document.querySelector('.nav');
+      const $b = document.querySelector('.r_container');
+
+      $a.classList.toggle('active');
+      $b.classList.toggle('active');
+
+    },false);
+
+    // $toggle.addEventListener("click",(evt)=>{
+    //   if($nav.style.display == "none"){      
+    //     $nav.style.display = "flex";
+    //     $r_container.style.display = "flex";
+        
+    //   }else{
+    //     $nav.style.display = "none";
+    //     $r_container.style.display = "none";
+       
+    //   }
+    // },false);
+  </script>
+</body>
+</html>

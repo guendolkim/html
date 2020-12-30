@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --li-width:80px    /*사용자정의 스타일 속성 지정*/
+    }
+    /* *{outline: 1px solid red;} */
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+    .wrapper {
+      flex-direction: column;
+    }
+
+    .wrapper .topmenu .depth1 {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    ul > li {
+      width: var(--li-width); /*메뉴 사이즈를 주고 여백을 줘서 주메뉴 ~ 말단메뉴 사이를 띄우지만 끊기지 않게 */
+      text-align: center;
+    }
+
+    .wrapper .topmenu .depth2,
+    .wrapper .topmenu .depth3 {
+      display: none;
+      position: absolute;
+    }
+    .wrapper .topmenu .depth1 li {
+      position: relative; /*각메뉴의 탑 높이만큼 높이를 맞춰 (부모요소에 맞춰서 마지막하위메뉴의 위치가 바뀜*/
+      
+    }
+    
+    .wrapper .topmenu .depth1 li:hover {
+      background-color: rosybrown;
+    }
+
+    .wrapper .topmenu .depth1 li:hover .depth2{
+      display: block;
+      background-color: silver;
+      
+    }
+    .wrapper .topmenu .depth2 li:hover .depth3{
+      display: block;
+      background-color: silver;
+      left:var(--li-width);
+      top: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div><a href="">로그인</a><a href="">회원가입</a></div>
+  <div><img src="" alt="">img</div>
+  <div class="wrapper">
+    <nav class="topmenu">
+      <ul class="depth1">
+        <li>
+          <a href="#">menu11</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu21</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu22</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu23</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu24</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu12</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu21</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu22</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu23</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu24</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu13</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu21</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu22</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu23</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu24</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu14</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu21</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu22</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu23</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu24</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu15</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu21</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu22</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu23</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu24</a>
+              <ul class="depth3">
+                <li><a href="#">menu31</a></li>
+                <li><a href="#">menu32</a></li>
+                <li><a href="#">menu33</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+ 
+</body>
+</html>

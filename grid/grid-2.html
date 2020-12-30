@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{outline: 1px solid red;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .wrapper{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);/* 1fr 1fr 1fr */
+      /* grid-template-rows: 100px 200px; */
+      grid-template-rows: minmax((100px auto));
+    }
+    .items{
+      padding: 10px;
+      background-color: #aaa;
+    }
+    .items:nth-child(2n){  /*짝수는 2n 홀수는 2n+1*/
+      background-color: #999;
+    }
+    .items:hover{
+      background-color: lightpink;
+      font-size: 1.5em;
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse exercitationem sint incidunt quas totam laboriosam impedit unde consequatur ut est odio accusamus praesentium magni labore provident obcaecati nulla, corporis reprehenderit?</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quaerat est quam ad atque qui, quia corrupti in at a perspiciatis tempora eum esse hic reprehenderit sed quae, aspernatur facere.</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis aliquam atque temporibus cum distinctio natus id, non saepe ipsam nulla veritatis eveniet doloribus suscipit esse, exercitationem fuga nam debitis molestiae?</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis distinctio accusantium accusamus alias molestias dolor perferendis. Enim, consectetur? Ipsum, voluptatum quos voluptatem quaerat perferendis corrupti inventore excepturi ab harum molestiae?</div>
+    <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus incidunt atque ea facere dolores sapiente amet? Velit, exercitationem vitae tempore, maiores necessitatibus temporibus iure nemo quam, perspiciatis eos fuga! Quos.</div>
+  </div>
+</body>
+</html>

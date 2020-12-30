@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{outline: 1px solid red;}
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .wrapper .topmenu .depth1 {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .wrapper .topmenu .depth2,
+    .wrapper .topmenu .depth3 {
+      display: none;
+    }
+
+    .wrapper .topmenu .depth1 li {
+      
+    }
+
+    .wrapper .topmenu .depth1 li:hover .depth2 {
+      display: block;
+    }
+    .wrapper .topmenu .depth2 li:hover .depth3 {
+      display: block;
+    }
+
+    .wrapper .topmenu .depth2{
+      position: absolute;
+    }
+    .wrapper .topmenu .depth3{
+      position: absolute;
+      left: 50px;
+      top: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="topmenu">
+      <ul class="depth1">
+        <li>
+          <a href="#">menu1</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu1</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu2</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu3</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu4</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu2</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu1</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu2</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu3</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu4</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu3</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu1</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu2</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu3</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu4</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu4</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu1</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu2</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu3</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu4</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu5</a>
+          <ul class="depth2">
+            <li>
+              <a href="#">menu1</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu2</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu3</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">menu4</a>
+              <ul class="depth3">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>내가만든것</title>
+</head>
+<body>
+  <ul>
+    <li id="apple">Apple</li>
+    <li id="banana">Banana</li>
+    <li id="orange">Orange</li>
+    <!-- <li id="grape">Grape</li> -->
+  </ul>
+  <input type="li" onclick="addList();">
+  <!-- <div><button id="btn-del">삭제</button></div> -->
+  <script>
+    //1)fruits의 하위요소로  grape 요소추가
+    function addList(){
+      const addLi = document.createElement('li');
+      const node = document.createTextNode("Grape")
+      addLi.appendChild(node);
+      document.querySelector('ul').appendChild(addLi);
+    }
+  </script>
+</body>
+</html>

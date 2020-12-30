@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    const sum = 0;
+    function calc(cBox){
+      if(cBox.checked)
+      sum+=parseInt(cBox.value);
+      else sum-=parseInt(cBox.value);
+      document.getElementById("sumtext").value = sum;
+    }
+  </script>
+</head>
+<body>
+  <h3>물품을 선택하면 금액이 자동 계산됨</h3>
+  <hr>
+  <form action="">
+    <input type="checkbox" name="hap" valuse="10000" onclick="clac(this)">모자 1만원
+    <input type="checkbox" name="shose" valuse="30000" onclick="clac(this)">구두 3만원
+    <input type="checkbox" name="평문가방" valuse="80000" onclick="clac(this)">명품가방 8만원
+    <br>
+    지불하실 금액 <input type="text" id="sumtext" value="0">
+  </form>
+</body>
+</html>

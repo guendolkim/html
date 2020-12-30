@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  
+    h2 {
+      text-align: center;
+    }
+    
+    li {
+      font-size: 18px;
+      list-style: none;
+    }
+
+    div {
+      border: 2px solid red;      
+      margin-left: 20%;
+      margin-right: 20%;
+      text-align: left
+      
+    }
+
+    input[type=text] {
+      padding-right: 50%;
+    }
+    input[type=password] {
+      padding-right: 50%;
+    }
+    input[type=tel] {
+      padding-right: 50%;
+    }
+
+    .mon {
+      width: 90%;
+    }
+    
+    .login {
+      background-color: green; color: white; width: 91.5%; height: 30px;
+    }
+  </style>
+</head>
+<body>
+  <h2>회원가입</h2>
+  <div>
+  <ul>
+    <li>
+      <label for="iden"><b>아이디</b></label><br>
+      <input type="text" id="iden">
+    </li>
+    <li>
+      <label for="pass"><b>비밀번호</b></label><br>
+      <input type="password" id="pass">
+    </li>
+    <li>
+      <label for="pass1"><b>비밀번호확인</b></label><br>
+      <input type="password" id="pass1">
+    </li>
+    <li>
+      <label for="tel"><b>전화번호</b></label><br>
+      <input type="tel" id="tel">
+    </li>
+    <li>
+      <label for="call"><b>별칭</b></label><br>
+      <input type="text" id="call">
+    </li>
+    <label for="reg"><b>지역</b></label><br>
+    <select name="region" id="reg">
+          <option value="1">== 선택 ==</option>
+          <option value="2">서울</option>
+          <option value="3">부산</option>
+          <option value="4">울산</option>
+          <option value="4">제주도</option>
+    </select>
+    <li>
+      <b>성별</b><br>
+      <label><input type="radio" name="sex">남자</label>
+      <label><input type="radio" name="sex">여자</label>
+
+    </li>
+    <li>
+      <b>취미</b><br>
+      <input type="checkbox" id="read">
+      <label for="read">독서</label>
+      <input type="checkbox" id="listen">
+      <label for="listen">음악감상</label>
+      <input type="checkbox" id="exercise">
+      <label for="exercise">운동</label>
+      <input type="checkbox" id="game">
+      <label for="game">게임</label>
+    </li>
+    <li>
+      <label for="year"><b>생년월일</b></label><br>
+      <input class="mon" type="month" id="year" size="100">
+
+    </li><br>
+    <li>
+      <input class="login" type="button" value="회원가입">
+    </li>
+  </ul>
+</div>
+  
+</body>
+</html>

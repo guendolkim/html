@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h3>나만의 버킷리스트</h3>
+  <hr>
+  <div>여름방학때 하고싶은 것들</div>
+  <div>
+    <ol type="1"  id="listdiv">
+  
+  </ol></div>
+  <input type="text" style="width: 300px;" value="" id="text">
+  <button id="submit">등록</button>
+  <script>
+   
+    let $submit = document.getElementById("submit")
+    let $ol = document.getElementById("listdiv");
+    
+    $submit.addEventListener("click",()=>{
+    let $text = document.getElementById("text");
+    let $list = $text.value;
+    let $textarr = $list.split(',');
+      for(let i=0; i<$textarr.length; i++){
+        let $newli = document.createElement("li");
+        $ol.appendChild($newli);
+        $newli.innerHTML = `${$textarr[i]} `;
+        let $del = document.createElement("button");
+        $del.innerHTML = "삭제";
+        $del.setAttribute("style","margin-left: 50px; margin-bottom: 10px");
+        $del.addEventListener("click" ,(eve) => {
+         let x = eve.target.parentElement;
+         $ol.removeChild(x);
+        })
+        $newli.appendChild($del);
+        let $replace = document.createElement("button");
+        $replace.innerHTML = "수정";
+        $replace.addEventListener("click",(eve) =>{
+          let x = eve.target.parentElement;
+          let $replace2 = document.createElement("button");
+          $replace2.innerHTML = "수정";
+          $replace2.setAttribute("style","margin-bottom: 10px");
+          x.innerHTML = "<input type='text' id='re'>";
+          x.appendChild($replace2);
+          
+          $replace2.addEventListener("click",(eve)=>{
+            let c = document.getElementById('re');
+            let d = c.value;
+            let x = eve.target.parentElement;
+            x.innerHTML = d;
+            x.appendChild($del);
+            x.appendChild($replace);
+          })
+   
+
+        })
+        $newli.appendChild($replace);
+      }
+    })
+   
+  </script>
+</body>
+</html>

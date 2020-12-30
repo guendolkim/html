@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2depthmenu</title>
+  <style>
+    * {
+      outline: 1px solid red;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .wrapper .topmenu .depth1 {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    .wrapper .topmenu .depth2 {
+      display: none;
+      position:absolute;  /*호버 됐다가 보여지는 메뉴판이 본문을 덮어서 보여준다*/  
+    }
+
+    .wrapper .topmenu .depth1 li:hover .depth2 {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <nav class="topmenu">
+      <ul class="depth1">
+        <li>
+          <a href="#">menu1</a>
+          <ul class="depth2">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu2</a>
+          <ul class="depth2">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu3</a>
+          <ul class="depth2">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu4</a>
+          <ul class="depth2">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">menu5</a>
+          <ul class="depth2">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis doloremque, eveniet sint autem ratione, minima commodi impedit sunt suscipit saepe maxime! Quis quos cupiditate temporibus, nihil delectus reiciendis sequi soluta!
+    Odit fugiat dicta molestias sunt, vitae mollitia quo aliquam ullam nulla ipsum natus nemo laborum impedit, tenetur iusto praesentium quas nisi sapiente! Suscipit eveniet ab perferendis, amet explicabo atque dolore!
+    Repudiandae accusamus iusto exercitationem voluptatem fugiat, eveniet vero? Ipsum voluptates amet, similique cupiditate doloribus tenetur mollitia libero error qui dolor eum temporibus earum, dignissimos alias. Laboriosam dolores temporibus ea hic.
+    Eaque tempore in alias dolores porro libero, repellat officia eius dolor labore, mollitia maiores architecto eligendi deserunt quam! Eaque ullam quas totam ad accusantium porro in aut vel, libero illo?
+    Exercitationem voluptatibus quasi, commodi doloribus repellat dolore pariatur reprehenderit tempora, eius dicta ducimus nostrum soluta minima nobis at eaque dolor? Vero, officia. Necessitatibus aspernatur facilis officiis corrupti, eaque velit et?
+    Vitae quod fugiat optio labore? Odit libero, fugit ipsam, id ducimus placeat ullam, sed debitis necessitatibus autem vero nisi voluptatem? Dolorem nobis quibusdam doloribus aliquid reiciendis blanditiis, deleniti incidunt repellendus.
+    Amet adipisci quod, neque assumenda suscipit veritatis ducimus hic explicabo, ut quo perferendis quisquam laudantium dicta eligendi commodi officiis dolorem placeat nemo harum non natus sunt nobis voluptatibus reiciendis. Dignissimos.
+    Vero molestias nemo excepturi. Fugit animi obcaecati soluta quod consequatur ex voluptas incidunt velit dolorem, distinctio nobis dicta nisi provident, architecto adipisci molestiae optio totam, possimus est fuga mollitia tempora.
+  </main>
+  <footer><p>bravo</p></footer>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .sex1 {
+      margin-top: 20px;
+    }
+    .inter {
+      margin-top: 20px;
+    }
+    .job {
+      margin-top: 20px;
+    }
+    
+    .box {
+      margin-top: 20px;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <h1>설문지</h1>
+  <p>소프트웨어 기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+  <hr>
+  <form>학년
+    <label><input type="radio" name="grade">1학년</label>
+    <label><input type="radio" name="grade">2학년</label>
+    <label><input type="radio" name="grade">3학년</label>
+    <label><input type="radio" name="grade">4학년</label>
+  </form>
+  <form class="sex1">성별
+    <label><input type="radio"name="sexual">남</label>
+    <label><input type="radio"name="sexual">여</label>
+  </form>
+  <form class="inter">관심분야
+    <select name="interes" id="intersting">
+      <option value="1">모바일소프트웨어</option>
+      <option value="2">웹디자인</option>
+      <option value="3">임베디드</option>
+    </select>
+  </form>
+  <form class="job">진로
+    <label for="1"><input type="checkbox" id="1">개발</label>
+    <label for="2"><input type="checkbox" id="2">기획</label>
+    <label for="3"><input type="checkbox" id="3">영업</label>
+    <label for="4"><input type="checkbox" id="4">창업</label>
+  </form>
+  <form class="box">남기고 싶은 말<br>
+    <textarea name="write" id="" cols="30" rows="10" placeholder="글을 남겨주세요"></textarea>
+   </form>
+  <small>Copyright 2017 by Beomjun</small>
+</body>
+</html>

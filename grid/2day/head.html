@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/77034e8e39.js" crossorigin="anonymous"></script>
+  <style>
+     *{outline: 1px solid red;
+      margin: 0px;
+     }
+     
+
+    /* .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      background-color: #333;
+      color: #FFF;
+      height: 100px;
+    }
+    
+    div {
+      display: flex;      
+      align-items: center;
+
+    } */
+    .left {
+      padding: 20px;
+      
+    }
+    .left>#rocket{
+      padding: 10px;
+      font-size: 30px;
+    }
+    .left>#space{
+      font-size: 20px;
+    }
+   
+    ul {
+      width: 500px;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li {
+      padding: 10px;
+    }
+    .menu:hover{
+      background-color: blanchedalmond;
+      color: #000;
+    }
+   
+    .r_container{
+      width: 150px;
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 30px;
+      padding: 20px;      
+    }
+
+    @media screen and (min-width:320px){
+      .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      background-color: #333;
+      color: #FFF;
+      height: 400px;
+      margin: 0px;
+    }
+    div {
+      display: flex;      
+      align-items: center;
+      
+    }
+    ul {
+      width:80px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      padding-left: 0px;
+      justify-content: space-between;
+    }
+    li {
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    }
+    @media screen and (min-width:768px){
+
+    }
+    @media screen and (min-width:1024px){
+      .container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      background-color: #333;
+      color: #FFF;
+      height: 100px;
+    }
+    ul {
+      width: 500px;
+      height: 100px;
+      list-style: none;
+      display: flex;
+      
+      padding-left: 0px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    li {
+      display: flex;
+      padding: 15px;
+      align-content: center;
+    }
+
+
+
+    }
+  </style>
+  </head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div id="rocket"><i class="fas fa-rocket"></i></div>
+    <p id="space">울산kh정보교육원</p>
+  </div>
+    <div>
+   <ul>
+      <li class="menu">java</li>
+      <li class="menu">database</li>
+      <li class="menu">spring</li>
+      <li class="menu">android</li>
+      <li class="menu">3d</li>
+    </ul>
+  </div>
+    <div class="r_container">
+      <div class="right"><i class="fab fa-facebook-square"></i></div>
+      <div class="right"><i class="fab fa-twitter-square"></i></div>
+      <div class="right"><i class="fab fa-instagram-square"></i></div>
+    </div>
+  </div> 
+</body>
+</html>

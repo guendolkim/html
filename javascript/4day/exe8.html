@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자바스크립트 테스트</title>
+  <script>
+    //case1)
+    window.addEventListener('load',init);  // <!-- window를 사용함으로써 먼저 읽혀도 상관없게 함.
+    function init(){
+    const elem = document.getElementById('myBody');
+    if(elem == null){
+      alert('body is not made yet');
+    }
+    }
+    //case2) 익명함수
+    window.addEventListener.getElementById('load',function(){  // <!-- window를 사용함으로써 먼저 읽혀도 상관없게 함.
+    const elem = document.getElementById('myBody');
+    if(elem == null){
+      alert('body is not made yet');
+    }
+    });
+    //case3) 람다식
+    window.addEventListener('load', () => {  // <!-- window를 사용함으로써 먼저 읽혀도 상관없게 함.
+    const elem = document.getElementById('myBody');
+    if(elem == null){
+      alert('body is not made yet');
+    }
+    });
+  </script>
+</head>
+<body id="myBody">
+  <p id="first">hello</p>
+
+  
+</body>
+</html>

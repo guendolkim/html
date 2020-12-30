@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수</title>
+</head>
+<body>
+<script>
+  //함수선언문
+   function add(x,y){
+      const sum = x + y;
+      return sum;
+    }  
+    const result = add(10,20);
+    console.log(result);
+
+    //함수 표현식
+    const add2 = function(x,y){
+      const sum = x+y;
+      return sum;
+    }
+    const result2= add2(30,20);
+    console.log(result2);
+
+    const add3 = (x,y) => x+add(1,2);
+      
+    
+    const result4 = add3(100);
+    console.log(result4);
+</script>
+</body>
+</html>

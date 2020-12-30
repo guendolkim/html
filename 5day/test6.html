@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0; padding: 0;
+    }
+    /* html {
+      font-size: 24px;
+    } */
+    a {text-decoration: none;}
+    .wrapper {
+      background-color: #111;
+      position: sticky;
+      top: 0px;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .upper {
+      height: 20vh;
+    }
+    .upper img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    nav {
+      background-color: #333;
+      color: #eee;
+      
+    }
+    .wrapper ul {
+      text-align: center;
+    }
+    .wrapper ul> li {
+      display: inline-block;
+      padding: 0.3rem 0.5rem;
+    }
+    .wrapper ul> li> a {
+      color: inherit;
+    }
+    .wrapper ul> li:nth-child(1) div {
+      width: 20px; height: 20px;
+      
+      display: inline-block;
+      border-radius: 50%;
+    }
+
+  
+    .wrapper ul> li:nth-child(1) div:nth-child(1) {
+      border: 1px solid red;
+     
+    }
+    .wrapper ul> li:nth-child(1) div:nth-child(2) {
+      border: 1px solid green;
+      margin-left: -14px;
+    }
+    .wrapper ul> li:nth-child(1) div:nth-child(3) {
+      border: 1px solid blue;
+      margin-left: -14px;
+    }
+    /* 메인영역 */
+    .wrap-main {
+      background-color: #ccc;
+    }
+    main{
+      background-color: #fff;
+    }
+    footer {
+      background-color: #999;
+      position: sticky;
+      bottom: 0px;
+    }
+    /* 좌측광고 */
+
+    .adv {
+      background-color: orange;
+      color: #ccc;
+      position: fixed;
+      top: 200px;
+      right: 10px;
+      padding: 10px;
+
+    }
+    .adv ul {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="upper">
+    <img src="https://cdn.pixabay.com/photo/2016/02/07/19/48/aurora-1185464__340.jpg" alt="">
+  </div>
+  <div class="wrapper">
+  <nav class="container">
+    <ul>
+      <li>
+        <div></div>
+        <div></div>
+        <div></div>
+      </li>
+      <li><a href="http://www.naver.com">menu1</a></li>
+      <li><a href="http://www.google.com">menu2</a></li>
+      <li><a href="http://yes24.com">menu3</a></li>
+    </ul>
+  </nav>
+</div>
+  <div class="wrap-main">
+    <main class="container">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt sit dolore exercitationem, error nisi asperiores suscipit nihil, delectus ad natus veniam odio doloremque, quidem aperiam rem officia velit totam similique.
+      Possimus minima provident deserunt! Aperiam tempore eveniet dolorum ab voluptatibus dolores ex harum libero quibusdam ea obcaecati, provident, aut recusandae id, facere qui! Pariatur magnam qui nihil excepturi. Vel, nobis.
+      Neque magnam, ex facere excepturi quia, earum delectus velit similique unde modi porro repellendus maxime harum voluptatem eum illum eligendi quod consectetur aut repudiandae. Totam consequatur est temporibus illum optio.
+      Voluptas consectetur deleniti animi aperiam quibusdam, doloremque similique repellendus esse veritatis dolores tempore pariatur deserunt placeat porro nihil voluptatem alias excepturi recusandae assumenda. Natus, tenetur beatae perferendis nihil blanditiis similique.Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iusto voluptatum ducimus? Mollitia, corporis. Nulla omnis ut magni blanditiis iure, facilis amet repudiandae architecto cum, mollitia repellat facere, ratione nostrum.
+      Deleniti quidem temporibus adipisci voluptates quod! Obcaecati delectus sit illum? Animi totam consequatur, neque labore nam maiores repudiandae autem illo. Quae praesentium eius excepturi officiis, rerum eligendi recusandae ut at.
+      Corrupti veritatis modi odio in ipsa voluptates, numquam et eveniet recusandae voluptatum hic nisi amet sapiente nemo, dolorem totam, omnis nulla veniam? Porro quam ab eaque, illo veritatis nostrum facilis.
+      Provident magnam voluptatibus dolorum alias autem? Culpa voluptas ipsum, tempore porro non voluptates suscipit aperiam perferendis beatae omnis vitae ullam consequatur iste libero quasi nihil ea. Iste nobis eligendi natus.</p>
+    </main>
+  </div>
+</body>
+<footer><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A vitae magni quas quasi laudantium blanditiis quibusdam, ab saepe reprehenderit? Quisquam impedit qui doloremque magni expedita molestias molestiae blanditiis ipsam unde?</p>
+</footer>
+<div class="adv">
+  <ul>
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+    <li>내용5</li>
+  </ul>
+</div>
+</html>
