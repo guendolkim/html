@@ -1,0 +1,102 @@
+@charset "UTF-8";
+
+*{
+  /* outline: 1px solid red; */
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.enroll{
+  display: flex;
+  /* justify-content: flex-end; */
+  background-color: #333;
+  justify-content: center;
+}
+.enroll_wrapper {
+  display: flex;
+  width: 800px;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+.topmenu {
+  width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  width: 800px;  
+}
+
+.topimg{
+  height: 200px;
+  width: 800px;
+  background-image: url("../img/tiger.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+ul > li {
+  width: 70px; /*메뉴 사이즈를 주고 여백을 줘서 주메뉴 ~ 말단메뉴 사이를 띄우지만 끊기지 않게 */
+  text-align: center;
+}
+
+.depth1 {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  background-color: #333;
+  
+}
+
+.depth2, .depth3 {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #333;
+}
+
+.depth1 li {
+  position: relative;
+  
+}
+
+.depth1 li:hover{
+  background-color: #999;
+}
+.depth2 li:hover{
+  background-color: #999;
+}
+.depth3 li:hover{
+  background-color: #999;
+}
+
+.depth1 li:hover .depth2 {
+  display: block;
+  
+       
+} 
+.depth2 li:hover .depth3 {
+  display: block;
+  left: 70px;
+  top: 0px;
+} 
