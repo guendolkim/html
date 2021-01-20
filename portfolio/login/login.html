@@ -1,69 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="../css/login.css">
   <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
-  <style>
-    *{
-      /* outline: 1px solid red; */
-    }
-    body {
-      display: flex;
-      height: 100vh;
-      justify-content: center;
-      align-items: center;
-    }
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      width: 300px;      
-      align-items: center;
-      border: 1px solid #333;
-      padding: 5px;
-    }
-    .enroll {
-      display: flex;
-      font-size: 12px;
-      color:skyblue;
-      margin-top: 10px;
-    } 
-    
-    
-    .img1, .id_box, .password_box, 
-    .btn_log, .check_box {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-    .userid, .password {
-      width: 100%;
-      margin: 10px 5px;
-    }
-    .img2, .img3 {
-      display: flex;
-      align-items: center;
-    }
-
-    .check_box {
-      font-size: 13px;
-      justify-content: flex-start;
-      margin-top: 10px;
-    }
-
-    .btn_log {
-      margin-top: 30px; 
-      background-color:rgb(25, 141, 25);
-
-    }
-    
-
-
-
-  </style>
+  <script defer src="../js/login.js"></script>
 </head>
 <body>
+  <form action="" method="post">
   <div class="wrapper">
     <img src="https://d3a3a5e2ntl4bk.cloudfront.net/uploads/2020/11/cde2b3c37263c2adb851457347f619b5-e1606686127897.png" alt="" class="img1">
     <div class="id_box">
@@ -76,26 +22,14 @@
   </div>
     <input class="btn_log" type="submit" value="로그인">
     <label for="check" class="check_box"><input id="check" type="checkbox">로그인상태유지</label>
+  </form>
     <div class="enroll">
     <p>아이디 찾기 |</p> &nbsp;
     <p>비밀번호 찾기 |</p> &nbsp;
     <p>회원가입</p>
   </div>
   </div>
-</body>
-<script>
-  // 로그인버튼 
-  const $btn_log = document.querySelector('.btn_log');
-  $btn_log.addEventListener("click", (evt)=>{
-    console.log("클릭됨");
-  },false);
 
-  //로그인상태유지
-  // const $check_box = document.querySelector('check_box');
-  // const $userid = document.querySelector('userid');
-  // const $password = document.querySelector('password');
-  // $check_box.addEventListener("click", (evt)=>{
-    
-  // },false);
-</script> 
+</body>
+
 </html>

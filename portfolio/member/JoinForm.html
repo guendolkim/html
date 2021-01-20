@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>bravo</p>
+
+<form action="/portfolio/member" method="post">
+<ul>
+<li><label for="id">ID</label> </li>
+<li> <input type="text" name="id" id="id" /></li>
+<li><label for="pw">Password</label> </li>
+<li><input type="password" name="pw"  id="pw"/></li>
+<li><label for="tel">Tel</li>
+<li></label> <input type="text" name="tel"  id="tel"/></li>
+<li><label for="nick">NickName</label> </li>
+<li><input type="text" name="nickname"  id="nick"/></li>
+<li>지역 <select name="region" id="">
+  <option value="02">서울</option>
+  <option value="051">부산</option>
+  <option value="052">울산</option>
+</select> </li>
+<li>성별</li>
+<li>
+<label for="man">남</label><input type="radio" name="gender" value="남" id="man">
+<label for="woman">여</label><input type="radio" name="gender" value="여" id="woman">
+</li>
+<li><label for="">Birth</label> </li>
+<li><input type="date" name="birth" />
+</li>
+<li> <input type="submit" value="회원가입" /></li>
+</ul>
+</form>
+</body>
+</html>

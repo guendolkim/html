@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {margin:0; padding:0; border:0;}
+    .video-txt {
+        margin: 0 auto;
+        min-height:740px;
+        padding: 30px 0 90px;
+        z-index: 10
+    }
+    .video-txt h1,
+    .video-txt p {
+        margin-left: 20px
+    }
+    .video-background {
+        overflow: hidden;
+        position: relative
+    }
+    .video-background .video-txt {
+        position: relative
+    }
+    
+    .video-background-container {
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5
+    }
+    @media (min-width: 1100px){
+     .vid_play{position: absolute; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); min-width: 100%; min-height: 100%; width: auto; height: auto; overflow: hidden;}
+    }
+    @media (max-width: 700px){
+     .video_tag{object-fit:cover;height:460px}
+    }
+    </style>
+    </head>
+    <body>
+    
+    <!-- html5 video태그사용 mp4일때 IE와 크롬 모두 정상작동.-->
+    <div class="video-background" style='background-image: url(""); background-size: cover;'>
+      <div class="video-txt">
+        <div>
+          <h1 style="color:white;font-size:20px;">html5 video태그사용 mp4일때 IE와 크롬 모두 정상작동.</h1>
+        </div>
+      </div>
+      <div class="video-background-container vid_play">
+      <video id="videoplay" class="video_tag" style="width: 100% ;"height="100%"  autoplay="" muted="" loop="" data-playtimes="50" data-widget="videolooper"><source src="/urban/member/resources/video/main.mp4" type="video/mp4">
+      mp4일때, IE와 크롬 모두 정상작동.controls(옵션:컨트롤버튼보이기)
+      </video>
+      </div>
+      <div style="z-index:40;position: relative;text-align:center;">
+       <!-- 미디어를 제어할 버튼 생성 -->
+       <input type="button" value="재생/일시정지" onclick="play();">
+      </div>
+      <script type="text/javascript">
+     //객체 생성
+     var videocontrol = document.getElementById("videoplay");
+     function play(){
+      //미디어 파일 재생 => 재생중일때 버튼을 누르면 메세지 출력
+      /*if(videocontrol.paused){
+       videocontrol.play();
+      }else{
+       alert("현재 재생중입니다.");
+      }*/
+      /*  '재생/일시정지' 버튼을 클릭 : paused속성을 사용하여 현재 미디어 재생상태에 따라 play()메서드나 pause()메서드를 호출하여 재생, 일시정지 동작을 하도록 한다.
+      */
+      if(videocontrol.paused) videocontrol.play();
+      else videocontrol.pause();
+     }
+      </script>
+    </div>
+    
+    
+</body>
+</html>

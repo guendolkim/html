@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      outline: 1px solid red;
+      margin: 0px;
+    }
+    body{
+      height: 100%;
+    }
+
+    ol, ul{
+      list-style: none;
+      padding: 0; 
+    }
+    .topwrapper {
+      width: 100%;
+    }
+    .wrapper .topwrapper li, .wrapper ol .midwrapper {
+      display: flex;
+      justify-content: center;
+    }
+ 
+    ul,
+    .wrapper ol li ul .left_searchbox,
+    .wrapper ol li ul .searchbox,
+    .wrapper ol li ul .right_searchbox div .logbox,
+    .wrapper ol li .bottom_search,
+    .wrapper ol li .bottom_search .left_mid{
+      display: inline-flex;      
+    }
+    .wrapper ol li ul .right_searchbox {
+      flex-direction: column;
+    }
+    .line_searchbox, .bottom_search {
+      width: 900px;
+      
+    }
+    .wrapper ol li ul .left_searchbox,
+    .wrapper ol li ul .right_searchbox  {
+      flex:0.25;
+    }
+    .wrapper ol li ul .searchbox {
+      flex:0.5;
+    }
+    .bottom_search {
+      justify-content: space-around;
+    }
+    
+
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <ol class="topwrapper">
+      <li>
+        <ul class="line_searchbox">
+          <li class="left_searchbox">
+            <div>박스</div>
+            <div>
+              <h3>오늘뭐먹지?</h3>
+            </div>
+          </li>
+          <li class="searchbox">
+            <div>검색박스</div>
+            <div>검색</div>
+          </li>
+          <li class="right_searchbox">
+            <div class="">
+              <ol class="logbox">
+                <li>로그인</li>
+                <li>회원가입</li>
+                <li>장바구니</li>
+                <li>고객센터</li>
+              </ol>
+            </div>
+            <div>
+              <ol class="snsbox">
+                <li>sns</li>
+                <li>sns</li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </li>
+      <li class="midwrapper">
+        <ol class="bottom_search">
+          <li class="left_mid">
+            <div>박스</div>
+            <span>카테고리</span>
+          </li>
+          <li><ul>
+            <li>레시피</li>
+            <li>구매</li>
+            <li>커뮤니티</li>
+            <li>랭킹</li>
+            <li>마이페이지</li>
+          </ul> </li>
+        </ol>
+      </li>
+      <li>배너박스</li>
+    </ol>
+  </div>
+
+</body>
+
+</html>
