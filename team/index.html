@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://kit.fontawesome.com/77034e8e39.js" crossorigin="anonymous"></script>
   <style>
     * {
-      outline: 1px solid red;
+      /* outline: 1px solid red; */
       margin: 0px;
+      padding: 0px;
     }
-    body{
+    /* body{
       height: 100%;
-    }
+    } */
 
     ol, ul{
       list-style: none;
       padding: 0; 
     }
     .topwrapper {
+      margin-top: 10px;
       width: 100%;
     }
     .wrapper .topwrapper li, .wrapper ol .midwrapper {
@@ -31,25 +34,134 @@
     .wrapper ol li ul .searchbox,
     .wrapper ol li ul .right_searchbox div .logbox,
     .wrapper ol li .bottom_search,
-    .wrapper ol li .bottom_search .left_mid{
+    .wrapper ol li .bottom_search .left_menu{
       display: inline-flex;      
     }
     .wrapper ol li ul .right_searchbox {
       flex-direction: column;
     }
+    .left_searchbox {
+      margin-top: 15px;
+    }
+    /* 사이트로고 */
+     .left_searchbox div i {
+      font-size: 60px;
+      margin-bottom: 5px;
+    }
+    /* 사이트 이름 */
+    .left_searchbox div h3 {
+      font-size: 30px;
+    }
+    /* 로그인 회원가입 글자 */
+    .logbox li {
+      font-size: 13px;
+    }
+    /* sns */
+    .snsbox {
+      display: flex;
+      font-size: 30px;
+      margin-left: 50px;
+    }
+    #sns1 {
+      margin-right: 20px;
+    }
+    
     .line_searchbox, .bottom_search {
       width: 900px;
       
     }
-    .wrapper ol li ul .left_searchbox,
-    .wrapper ol li ul .right_searchbox  {
-      flex:0.25;
+    .wrapper ol li ul .left_searchbox  {
+      flex:0.3;
+    }
+    .wrapper ol li ul .right_searchbox{
+      flex:0.3;
     }
     .wrapper ol li ul .searchbox {
       flex:0.5;
     }
     .bottom_search {
       justify-content: space-around;
+    }
+    /* 검색상자 */
+    .wrapper ol li ul .searchbox{
+      height: 30px;
+      margin: 20px;
+    
+    }
+    .wrapper ol li ul .searchbox .in_searchbox {
+      width: 100%;
+      height: 90%;
+      font-size: 11px;      
+    }
+    
+    .midwrapper{
+      height: 50px;
+     background-color:#5fae4c;
+
+      box-shadow: 3px 3px;
+      margin-bottom: 10px;
+    }
+    
+    .left_menu{
+      width: 300px;
+      margin: 10px;
+    }
+    .main_menu {
+      width: 600px;
+      justify-content: space-between;
+      margin: 10px;
+    }
+    .bannerwrapper{
+      height: 100px;
+    }
+    .banner_box{
+      width: 900px;     
+      
+    }
+    /* slider banner */    
+  .banner_box{height:100%;overflow:hidden;}
+  .banner_box ul{width:calc(100% * 4);display:flex;animation:slide 8s infinite;} /* slide를 8초동안 진행하며 무한반복 함 */
+  .banner_box li{width:calc(100% / 4);height:300px;}
+  .banner_box li:nth-child(1){background-image: url('/team/banner/1.png');background-repeat: no-repeat;}
+  .banner_box li:nth-child(2){background-image: url('/team/banner/2.png');background-repeat: no-repeat;}
+  .banner_box li:nth-child(3){background-image: url('/team/banner/3.png');background-repeat: no-repeat;}
+  .banner_box li:nth-child(4){background-image: url('/team/banner/4.png');background-repeat: no-repeat;}
+  @keyframes slide {
+    0% {margin-left:0;} /* 0 ~ 10  : 정지 */
+    10% {margin-left:0;} /* 10 ~ 25 : 변이 */
+    25% {margin-left:-100%;} /* 25 ~ 35 : 정지 */
+    35% {margin-left:-100%;} /* 35 ~ 50 : 변이 */
+    50% {margin-left:-200%;}
+    60% {margin-left:-200%;}
+    75% {margin-left:-300%;}
+    85% {margin-left:-300%;}
+    100% {margin-left:0;}
+  }
+  
+
+    /* 본문CSS */
+    .contentwrapper, .page_wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .bodywrapper, .category_wrapper {
+      display: flex;      
+      width: 900px;
+    }
+    .pic_box1 ul, .pic_box2 ul{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+   }
+    .pic_wrapper div ul li img {
+      width: 200px;
+      height: 220px;
+      background-color: coral;
+      
+    }
+    .bottom_banner {
+      height: 100px;
+      background-color: cadetblue;
     }
     
 
@@ -58,56 +170,124 @@
 
 <body>
   <div class="wrapper">
+    <!-- 상단메뉴전체 wrapper -->
     <ol class="topwrapper">
       <li>
+        <!-- 상단 검색상자 동일선 라인 -->
         <ul class="line_searchbox">
+          <!-- 검색박스 왼쪽 로고와 사이트이름 -->
           <li class="left_searchbox">
-            <div>박스</div>
+            <div><i class="fas fa-utensils"></i></div>
             <div>
               <h3>오늘뭐먹지?</h3>
             </div>
           </li>
-          <li class="searchbox">
-            <div>검색박스</div>
-            <div>검색</div>
-          </li>
+          <!-- 검색박스 -->
+          <form class="searchbox">
+           <input class="in_searchbox" type="text" placeholder="오늘 뭐 먹지?">
+           <input class="in_searchboxbtn" type="submit" value="검색">
+          </form>
+          <!-- 검색박스 오른쪽 (로그인,회운가입,장바구니,고객센터,sns) -->
           <li class="right_searchbox">
             <div class="">
               <ol class="logbox">
-                <li>로그인</li>
-                <li>회원가입</li>
-                <li>장바구니</li>
+                <li>로그인 |</li>
+                <li>회원가입 |</li>
+                <li>장바구니 |</li>
                 <li>고객센터</li>
               </ol>
             </div>
+            <!-- sns -->
             <div>
               <ol class="snsbox">
-                <li>sns</li>
-                <li>sns</li>
+                <li><i id="sns1" class="fab fa-facebook-square"></i></li>
+                <li><i class="fab fa-instagram-square"></i></li>
               </ol>
             </div>
           </li>
         </ul>
       </li>
+      <!-- 검색상자 아래 wrapper -->
       <li class="midwrapper">
+      <!-- 검색상자 아래 메뉴라인 -->
         <ol class="bottom_search">
-          <li class="left_mid">
+          <!-- 메뉴 왼쪽 -->
+          <li class="left_menu">
             <div>박스</div>
-            <span>카테고리</span>
+            <div>카테고리</div>
           </li>
-          <li><ul>
+          <!-- 메뉴라인 -->
+          <li>
+            <ul class="main_menu">
             <li>레시피</li>
             <li>구매</li>
             <li>커뮤니티</li>
             <li>랭킹</li>
             <li>마이페이지</li>
-          </ul> </li>
+          </ul> 
+        </li>
         </ol>
       </li>
-      <li>배너박스</li>
+      <!-- 배너박스 -->
+      <li class="bannerwrapper">
+        <div class="banner_box">
+          <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        </div>
+      </li>
     </ol>
   </div>
-
 </body>
-
+<body>
+<div class="contentwrapper">
+  <div class="bodywrapper">
+    <ol>
+      <li class="category_wrapper">
+        <ul class="category">
+          <li>분류</li>
+          <li>리스트</li>
+        </ul>
+      </li>
+      <li class="pic_wrapper">
+        <div class="pic_box1">
+        <ul>
+          <li><img src="/team/cook/1.png" alt=""></li>
+          <li><img src="/team/cook/2.png" alt=""></li>
+          <li><img src="/team/cook/1.png" alt=""></li>
+          <li><img src="/team/cook/2.png" alt=""></li>
+        </ul>
+      </div>
+        <div class="pic_box2">
+        <ul>
+          <li><img src="/team/cook/1.png" alt=""></li>
+          <li><img src="/team/cook/2.png" alt=""></li>
+          <li><img src="/team/cook/1.png" alt=""></li>
+          <li><img src="/team/cook/2.png" alt=""></li>
+        </ul>
+      </div>
+      </li>
+      <li class="page_wrapper">
+        <div>
+          <span>&lt; pre 1,2,3,......10 end &gt;</span>
+        </div>  
+      </li>
+      <li class="bottom_banner">
+        <div class="bottom_banner_line">
+          <img src="" alt="">배너박스
+        </div>
+      </li>
+      <li>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
+</body>
 </html>
